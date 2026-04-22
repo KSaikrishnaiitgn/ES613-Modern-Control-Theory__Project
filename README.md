@@ -17,9 +17,8 @@ The workflow of the project is as follows:
 2. **System Analysis**  
    The linearized model is analyzed for stability, controllability, and observability.
 
-3. **LQR Controller Design**  
+3. **LQR Controller,Observer Design**  
    An optimal state-feedback controller is designed with output weighting.
-   **Observer Design**  
    A state observer is developed to estimate unmeasured states.
 
 4. **Disturbance Handling**  
@@ -30,14 +29,20 @@ The workflow of the project is as follows:
 ---
 
 ## 📁 File Structure
-01_Jacobian_linearization.m % Linearization of nonlinear model
-02_System_Analysis.m % Stability & system property analysis
-03_lQR_Obs_design.m % LQR controller design
-04_Gripper_Autodisturbance.m % Observer (state estimation)
-05_Gripper_Outputweighted.m % Disturbance analysis and robustness
-README.md % Project documentation
-
----
+1. **01_Jacobian_linearization.m**
+2. **02_System_Analysis.m** 
+3. **03_lQR_Obs_design.m**
+4. **04_Gripper_Autodisturbance.m**
+5. **05_Gripper_Outputweighted.m**
+6. **README.md**
+## ▶️ How to Run
+1. Open MATLAB and navigate to the project folder  
+2. Run the files in the following order:
+1. **01_Jacobian_linearization.m**
+2. **02_System_Analysis.m** 
+3. **03_lQR_Obs_design.m**
+4. **04_Gripper_Autodisturbance.m**
+5. **05_Gripper_Outputweighted.m**
 
 ## 🧠 Key Concepts Used
 
