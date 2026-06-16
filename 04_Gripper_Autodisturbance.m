@@ -13,12 +13,12 @@
 clear; clc; close all;
 
 %% ── 1. PARAMETERS ───────────────────────────────────────────────
-L   = 0.15;
+L   = 0.1616;
 l   = L/3;
-m   = 0.1;
+m   = 0.01289;
 Jl  = m*l^2;
-b   = 0.011;
-k   = 0.5;
+b   = 0.0036;
+k   = 2.22;
 kc  = 50;
 d   = 0.12;
 w   = 0.04;
@@ -99,7 +99,7 @@ dist_list_deg = [2, 5, 8, 15, 20];
 % ];
 
 n_dist = numel(dist_list_deg);
-dist_colors = colormap(lines(n_dist));
+dist_colors = lines(n_dist);
 fps    = 25;
 
 %% ── 7. PRE-SIMULATE ALL DISTURBANCES ────────────────────────────
@@ -351,8 +351,8 @@ set(h_info,'String', sprintf( ...
 
 title(ax_plot, 'Recovery Response – All Disturbances (Overlaid)', ...
       'FontSize',12,'FontWeight','bold');
-legend(ax_plot, leg_handles, 'Location','southeast','FontSize',9, ...
-       'Title','Disturbance');
+lgd = legend(ax_plot, leg_handles, 'Location','southeast','FontSize',9);
+lgd.Title.String = 'Disturbance';
 
 fprintf('\nSweep complete. All %d cases shown.\n', n_dist);
 fprintf('To change sweep values, edit dist_list_deg on line ~130.\n');
